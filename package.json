@@ -11,13 +11,16 @@
     "src",
     "skills",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "manifest.json",
+    "icon.png"
   ],
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "pack:desktop": "npx -y @anthropic-ai/mcpb pack . clipzi.mcpb"
   },
   "keywords": [
     "clipzi",

@@ -7,6 +7,7 @@ This repository is everything an agent needs to use it:
 - **`clipzi`**, the command line (`npx -y github:clipzi-app/clipzi-agent`, or `npm i -g github:clipzi-app/clipzi-agent` for the `clipzi` command), for terminals, scripts and agents that run commands.
 - **The `clipzi` skill** (`skills/clipzi/SKILL.md`), which teaches an agent when and how to use it.
 - **Plugins** for Claude Code and Gemini CLI that bring the skill and Clipzi's MCP server together.
+- **A desktop extension** (`clipzi.mcpb`) for Claude Desktop: a small server on your computer, so Claude can upload a video file you have locally and save the finished clips to your Downloads folder, from a normal chat.
 
 ## Quick start
 
@@ -24,6 +25,7 @@ No browser (a server, CI, a headless agent)? Create a key at https://clipzi.app/
 | Agent | How |
 |---|---|
 | Any agent that reads skills | `npx skills add clipzi-app/clipzi-agent` |
+| Claude Desktop (uses video files on your computer) | Download `clipzi.mcpb` from the [latest release](https://github.com/clipzi-app/clipzi-agent/releases/latest) and open it: Claude installs it as an extension |
 | Claude Code (skill + MCP server) | `/plugin marketplace add clipzi-app/clipzi-agent`, then `/plugin install clipzi@clipzi` |
 | Claude Code (MCP server only) | `claude mcp add --transport http clipzi https://clipzi.app/mcp` |
 | Gemini CLI | `gemini extensions install https://github.com/clipzi-app/clipzi-agent` |

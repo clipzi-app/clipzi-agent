@@ -1,0 +1,43 @@
+{
+  "manifest_version": "0.4",
+  "name": "clipzi",
+  "display_name": "Clipzi",
+  "version": "0.1.0",
+  "description": "Turn long videos into finished short vertical clips, straight from video files on your computer.",
+  "long_description": "Clipzi turns podcasts, interviews, streams and classes into short clips for TikTok, Reels and Shorts. This extension runs on your computer, so Claude can use a video file you have here: it uploads it to your Clipzi account, Clipzi finds the moments, frames whoever is talking (split screen for two people), adds captions, removes dead air and renders each clip, and Claude saves the finished mp4s to your Downloads folder.\n\nYou sign in with your Clipzi account in the browser the first time (it is created right there if you do not have one, no card). Without a plan you can try it with 2 long videos and watch your clips in Clipzi; downloading them needs a plan. Everything Claude makes also appears in your Clipzi editor, where you can change it.",
+  "author": { "name": "Clipzi", "email": "g@clipzi.app", "url": "https://clipzi.app" },
+  "repository": { "type": "git", "url": "https://github.com/clipzi-app/clipzi-agent" },
+  "homepage": "https://clipzi.app/en/mcp",
+  "documentation": "https://clipzi.app/en/developers",
+  "support": "https://clipzi.app/en/contact",
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "src/desktop-server.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/src/desktop-server.mjs"],
+      "env": { "CLIPZI_API_KEY": "${user_config.api_key}" }
+    }
+  },
+  "tools": [
+    { "name": "upload_local_video", "description": "Bring a video file on this computer into Clipzi." },
+    { "name": "save_clip", "description": "Save a finished clip to a folder on this computer." },
+    { "name": "sign_in", "description": "Sign in to Clipzi in the browser." },
+    { "name": "sign_out", "description": "Forget the Clipzi sign-in on this computer." }
+  ],
+  "tools_generated": true,
+  "keywords": ["video", "clips", "shorts", "reels", "podcast", "captions"],
+  "license": "MIT",
+  "privacy_policies": ["https://clipzi.app/en/privacy"],
+  "compatibility": { "platforms": ["darwin", "win32", "linux"], "runtimes": { "node": ">=20.0.0" } },
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "Clipzi API key (optional)",
+      "description": "Leave empty to sign in with your browser the first time. Or paste a key from clipzi.app/dashboard/agents.",
+      "sensitive": true,
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.git/
+.gitignore
+test/
+bin/
+skills/
+.claude-plugin/
+gemini-extension.json
+clips/
+*.mcpb
+node_modules/

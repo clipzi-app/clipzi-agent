@@ -31,7 +31,7 @@ async function waitForJob(jobId, onRead) {
   }
 }
 
-async function download(url, dir, name, taken) {
+export async function download(url, dir, name, taken) {
   await mkdir(dir, { recursive: true });
   const file = join(dir, uniqueName(name, taken));
   const res = await fetch(url);
@@ -41,7 +41,7 @@ async function download(url, dir, name, taken) {
 }
 
 /** A local file into Clipzi: upload_video, the PUT, finish_upload. Returns the new video's id. */
-async function uploadFile(path) {
+export async function uploadFile(path) {
   const size = statSync(path).size;
   const filename = basename(path);
   if (!/\.(mp4|mov|m4v|mkv|webm)$/i.test(extname(filename))) {

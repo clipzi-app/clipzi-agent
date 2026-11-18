@@ -200,8 +200,9 @@ async function refresh(creds) {
 
 /** The bearer for the next request: the API key when set, else the saved sign-in (refreshed when needed). */
 export async function bearer({ forceRefresh = false } = {}) {
+  // Only a real key counts: a desktop app that leaves the optional setting empty may pass "" or its own placeholder.
   const key = process.env.CLIPZI_API_KEY?.trim();
-  if (key) return { token: key, via: 'api_key' };
+  if (key && key.startsWith('ck_')) return { token: key, via: 'api_key' };
   let creds = await readCredentials();
   if (!creds || creds.kind !== 'oauth') {
     throw new AuthError('Not signed in. Run `clipzi login` (opens the browser), or set CLIPZI_API_KEY to a key from https://clipzi.app/dashboard/agents.');
