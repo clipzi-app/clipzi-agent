@@ -23,10 +23,10 @@ No browser (a server, CI, a headless agent)? Create a key at https://clipzi.app/
 
 | Agent | How |
 |---|---|
-| Any agent that reads skills | `npx skills add gonzaloorsi/clipzi-agent` |
-| Claude Code (skill + MCP server) | `/plugin marketplace add gonzaloorsi/clipzi-agent`, then `/plugin install clipzi@clipzi` |
+| Any agent that reads skills | `npx skills add clipzi-app/clipzi-agent` |
+| Claude Code (skill + MCP server) | `/plugin marketplace add clipzi-app/clipzi-agent`, then `/plugin install clipzi@clipzi` |
 | Claude Code (MCP server only) | `claude mcp add --transport http clipzi https://clipzi.app/mcp` |
-| Gemini CLI | `gemini extensions install https://github.com/gonzaloorsi/clipzi-agent` |
+| Gemini CLI | `gemini extensions install https://github.com/clipzi-app/clipzi-agent` |
 | Claude.ai, ChatGPT, Cursor and others | Add a connector with the address `https://clipzi.app/mcp`: https://clipzi.app/en/mcp |
 
 ## Commands
