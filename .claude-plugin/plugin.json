@@ -1,0 +1,18 @@
+{
+  "name": "clipzi",
+  "version": "0.1.0",
+  "description": "Turn long videos into finished short vertical clips with Clipzi: the clipzi skill plus Clipzi's MCP server (sign in with your Clipzi account).",
+  "author": {
+    "name": "Clipzi",
+    "url": "https://clipzi.app"
+  },
+  "homepage": "https://clipzi.app/en/mcp",
+  "license": "MIT",
+  "keywords": ["video", "clips", "shorts", "reels", "podcast", "mcp"],
+  "mcpServers": {
+    "clipzi": {
+      "type": "http",
+      "url": "https://clipzi.app/mcp"
+    }
+  }
+}

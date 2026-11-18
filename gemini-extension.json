@@ -1,0 +1,11 @@
+{
+  "name": "clipzi",
+  "version": "0.1.0",
+  "description": "Turn long videos into finished short vertical clips with Clipzi.",
+  "contextFileName": "skills/clipzi/SKILL.md",
+  "mcpServers": {
+    "clipzi": {
+      "httpUrl": "https://clipzi.app/mcp"
+    }
+  }
+}

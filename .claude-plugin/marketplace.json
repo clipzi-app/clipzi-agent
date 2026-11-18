@@ -1,0 +1,18 @@
+{
+  "name": "clipzi",
+  "owner": {
+    "name": "Clipzi",
+    "url": "https://clipzi.app"
+  },
+  "metadata": {
+    "description": "Clipzi for Claude Code: long videos in, finished short clips out."
+  },
+  "plugins": [
+    {
+      "name": "clipzi",
+      "source": "./",
+      "description": "The clipzi skill and Clipzi's MCP server: upload a long video, let Clipzi find the moments, frame them for vertical, caption them and hand you the mp4s.",
+      "category": "media"
+    }
+  ]
+}
