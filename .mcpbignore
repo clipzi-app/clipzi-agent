@@ -8,3 +8,4 @@ gemini-extension.json
 clips/
 *.mcpb
 node_modules/
+plugin/

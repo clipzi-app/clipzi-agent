@@ -8,11 +8,21 @@
   },
   "homepage": "https://clipzi.app/en/mcp",
   "license": "MIT",
-  "keywords": ["video", "clips", "shorts", "reels", "podcast", "mcp"],
+  "keywords": [
+    "video",
+    "clips",
+    "shorts",
+    "reels",
+    "podcast",
+    "mcp"
+  ],
   "mcpServers": {
     "clipzi": {
       "type": "http",
       "url": "https://clipzi.app/mcp"
     }
-  }
+  },
+  "displayName": "Clipzi",
+  "privacyPolicyUrl": "https://clipzi.app/en/privacy",
+  "repository": "https://github.com/clipzi-app/clipzi-agent"
 }
