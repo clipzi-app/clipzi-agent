@@ -24,5 +24,8 @@
   },
   "displayName": "Clipzi",
   "privacyPolicyUrl": "https://clipzi.app/en/privacy",
-  "repository": "https://github.com/clipzi-app/clipzi-agent"
+  "repository": "https://github.com/clipzi-app/clipzi-agent",
+  "supportUrl": "https://clipzi.app/en/contact",
+  "termsOfServiceUrl": "https://clipzi.app/en/terms",
+  "documentationUrl": "https://clipzi.app/en/mcp"
 }
