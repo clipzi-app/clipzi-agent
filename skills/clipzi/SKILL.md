@@ -5,18 +5,18 @@ description: Turn a long video (podcast, interview, stream, lecture, webinar) in
 
 # Clipzi
 
-Clipzi takes a long video and gives back finished short clips: it transcribes it, finds the moments that stand on their own (cut on whole sentences), frames each one for vertical (the person talking, a split screen when two talk), adds captions and a title, removes dead air, and renders the mp4. You drive it with the `clipzi` command: `npx -y github:clipzi-app/clipzi-agent <command>` runs it without installing; `npm i -g github:clipzi-app/clipzi-agent` installs it as `clipzi`. The examples below write `clipzi` for short. Every command prints JSON on stdout; progress goes to stderr.
+Clipzi takes a long video and gives back finished short clips: it transcribes it, finds the moments that stand on their own (cut on whole sentences), frames each one for vertical (the person talking, a split screen when two talk), adds captions and a title, removes dead air, and renders the mp4. You drive it with the `clipzi` command: `npx -y @clipzi/cli <command>` runs it without installing; `npm i -g @clipzi/cli` installs it as `clipzi`. The examples below write `clipzi` for short. Every command prints JSON on stdout; progress goes to stderr.
 
 ## Setup (once)
 
-- A person with a browser: `npx -y github:clipzi-app/clipzi-agent login` opens Clipzi to sign in and allow this terminal. No account yet? The same screen creates one.
+- A person with a browser: `npx -y @clipzi/cli login` opens Clipzi to sign in and allow this terminal. No account yet? The same screen creates one.
 - A server, CI or an agent with no browser: set `CLIPZI_API_KEY` to a key the person creates at https://clipzi.app/dashboard/agents.
-- Check with `npx -y github:clipzi-app/clipzi-agent account`: the plan, how many long videos are left, how many clips the AI can still edit.
+- Check with `npx -y @clipzi/cli account`: the plan, how many long videos are left, how many clips the AI can still edit.
 
 ## The short way
 
 ```bash
-npx -y github:clipzi-app/clipzi-agent make ./episode.mp4 --count 5 --out ./clips
+npx -y @clipzi/cli make ./episode.mp4 --count 5 --out ./clips
 ```
 
 - The source can be a local file (uploaded for you), a link to the video FILE (direct https, or a Google Drive / Dropbox share link set to "anyone with the link"), or the id of a video already in Clipzi (`clipzi videos`).

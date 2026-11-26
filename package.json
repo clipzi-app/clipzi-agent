@@ -1,6 +1,6 @@
 {
   "name": "@clipzi/cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Turn long videos into finished short clips from your terminal or your AI agent. The Clipzi command line: upload a video, let Clipzi find the moments, frame them for vertical, caption them and hand you the mp4s.",
   "type": "module",
   "bin": {

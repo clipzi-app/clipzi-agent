@@ -4,7 +4,7 @@
 
 This repository is everything an agent needs to use it:
 
-- **`clipzi`**, the command line (`npx -y github:clipzi-app/clipzi-agent`, or `npm i -g github:clipzi-app/clipzi-agent` for the `clipzi` command), for terminals, scripts and agents that run commands.
+- **`clipzi`**, the command line (`npx -y @clipzi/cli`, or `npm i -g @clipzi/cli` for the `clipzi` command), for terminals, scripts and agents that run commands.
 - **The `clipzi` skill** (`skills/clipzi/SKILL.md`), which teaches an agent when and how to use it.
 - **Plugins** for Claude Code and Gemini CLI that bring the skill and Clipzi's MCP server together.
 - **A desktop extension** (`clipzi.mcpb`) for Claude Desktop: a small server on your computer, so Claude can upload a video file you have locally and save the finished clips to your Downloads folder, from a normal chat.
@@ -12,8 +12,8 @@ This repository is everything an agent needs to use it:
 ## Quick start
 
 ```bash
-npx -y github:clipzi-app/clipzi-agent login                      # opens the browser: sign in and allow this terminal
-npx -y github:clipzi-app/clipzi-agent make ./episode.mp4 --count 5 --out ./clips
+npx -y @clipzi/cli login                      # opens the browser: sign in and allow this terminal
+npx -y @clipzi/cli make ./episode.mp4 --count 5 --out ./clips
 ```
 
 `make` uploads the file, lets Clipzi choose the moments, frames and captions each clip and saves every mp4 in `./clips` as it finishes. The source can also be a link to the video file (direct, Google Drive or Dropbox) or the id of a video already in your account.

@@ -221,7 +221,7 @@ export const COMMANDS = {
 export const BOOLEAN_FLAGS = new Set(['wait', 'title', 'horizontal', 'edited', 'download', 'browser', 'help']);
 
 export const HELP = `clipzi: long videos in, finished short clips out. ${SITE}
-Run with npx -y github:clipzi-app/clipzi-agent <command>, or npm i -g github:clipzi-app/clipzi-agent for the clipzi command.
+Run with npx -y @clipzi/cli <command>, or npm i -g @clipzi/cli for the clipzi command.
 
 Sign in
   clipzi login                 Opens the browser to sign in and allow this terminal
