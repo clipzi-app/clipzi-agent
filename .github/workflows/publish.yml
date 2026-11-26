@@ -1,0 +1,25 @@
+# Publishes @clipzi/cli to npm when a GitHub release is published.
+# No token is stored: npm trusts this workflow of this repository (trusted publishing, OIDC).
+# To release: bump "version" in package.json, push, then publish a GitHub release for that version.
+name: Publish to npm
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      - run: npm install -g npm@latest
+      - run: npm test
+      - run: npm publish --access public
